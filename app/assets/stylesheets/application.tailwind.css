@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Premium Button Components */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600/60 focus:outline-none focus:ring-4 focus:ring-indigo-500/50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-700 transition-all duration-300 hover:scale-105 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
+  }
+
+  /* Premium Glass Card Effect */
+  .glass {
+    @apply rounded-2xl border border-gray-200/80 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10;
+  }
+
+  /* Service Card with Premium Hover */
+  .service-card {
+    @apply relative overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20;
+  }
+
+  /* Premium Badge Component */
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm;
+  }
+
+  /* Typography Helpers */
+  .section-title {
+    @apply text-sm font-bold uppercase tracking-widest text-indigo-600;
+  }
+
+  .section-heading {
+    @apply bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-4xl font-bold text-transparent lg:text-5xl;
+  }
+
+  .muted {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  /* Premium Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
+  }
+
+  /* Icon Container */
+  .icon-container {
+    @apply flex h-16 w-16 items-center justify-center rounded-2xl shadow-lg transition-all duration-300;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply relative overflow-hidden rounded-2xl border border-gray-200/80 bg-gradient-to-br from-white to-gray-50 p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  /* Form Input */
+  .form-input {
+    @apply block w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-900 transition-all duration-200 placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
+  }
+
+  .form-textarea {
+    @apply block w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-900 transition-all duration-200 placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
+  }
+
+  .form-select {
+    @apply block w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-900 transition-all duration-200 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
+  }
+
+  /* Stat Card */
+  .stat-card {
+    @apply text-center transition-all duration-300 hover:scale-105;
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    @apply relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    @apply absolute -left-1/4 -top-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-indigo-200/40 to-purple-200/40 blur-3xl;
+  }
+
+  .hero-gradient::after {
+    content: '';
+    @apply absolute -bottom-1/4 -right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-purple-200/40 to-pink-200/40 blur-3xl;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Client Logos Slider Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gradient-to-b from-indigo-500 to-purple-600;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-indigo-600 to-purple-700;
+}
+
+/* Selection Color */
+::selection {
+  @apply bg-indigo-200 text-indigo-900;
+}
+
+::-moz-selection {
+  @apply bg-indigo-200 text-indigo-900;
+}
