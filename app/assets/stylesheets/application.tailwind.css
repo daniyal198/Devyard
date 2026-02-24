@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  /* Premium Button Components */
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600/60 focus:outline-none focus:ring-4 focus:ring-indigo-500/50;
+ .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-700 px-3 py-1 text-[13px] font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 active:scale-95;
+    /* We removed fixed width/height so it fits the text naturally */
+    white-space: nowrap; 
   }
-
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-700 transition-all duration-300 hover:scale-105 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
   }
@@ -24,7 +24,7 @@
 
   /* Premium Badge Component */
   .badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm;
+    @apply inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-0 text-sm font-semibold text-indigo-700 shadow-sm;
   }
 
   /* Typography Helpers */
@@ -52,9 +52,12 @@
 
   /* Testimonial Card */
   .testimonial-card {
-    @apply relative overflow-hidden rounded-2xl border border-gray-200/80 bg-gradient-to-br from-white to-gray-50 p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
-  }
-
+  @apply relative overflow-hidden rounded-2xl border border-gray-200/80 bg-gradient-to-br from-white to-gray-50 p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  
+  /* ADD THESE TWO LINES */
+  display: flex !important;
+  flex-direction: column !important;
+}
   /* Form Input */
   .form-input {
     @apply block w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-900 transition-all duration-200 placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/20;
