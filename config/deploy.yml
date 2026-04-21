@@ -7,7 +7,7 @@ servers:
 
 proxy:
   ssl: true
-  host: devyard.co, www.devyard.co
+  host: devyard.co
   app_port: 3000
 
 ssh:
