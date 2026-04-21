@@ -1,0 +1,13 @@
+.git
+.gitignore
+.dockerignore
+README.md
+log/*
+tmp/*
+test/
+spec/
+node_modules/
+.env*
+.DS_Store
+coverage/
+.kamal/secrets
