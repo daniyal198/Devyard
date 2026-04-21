@@ -1,0 +1,33 @@
+service: devyard
+image: devyard
+
+servers:
+  web:
+    - 54.198.110.172
+
+proxy:
+  ssl: true
+  host: devyard.co, www.devyard.co
+  app_port: 3000
+
+ssh:
+  user: ubuntu
+
+registry:
+  server: 748435451926.dkr.ecr.us-east-1.amazonaws.com
+  username: AWS
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+env:
+  secret:
+    - RAILS_MASTER_KEY
+    - SECRET_KEY_BASE
+
+volumes:
+  - /data/devyard/storage:/rails/storage
+
+builder:
+  arch: amd64
+  context: .
+  dockerfile: Dockerfile
