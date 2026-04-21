@@ -71,3 +71,5 @@ group :test do
   gem 'selenium-webdriver', '>= 4.11.0'
   
 end
+
+gem "kamal", "~> 2.11"
