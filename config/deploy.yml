@@ -10,6 +10,11 @@ proxy:
   host: devyard.co
   app_port: 3000
 
+  healthcheck:
+    path: /up
+    interval: 3
+    timeout: 30
+
 ssh:
   user: ubuntu
 
@@ -31,3 +36,17 @@ builder:
   arch: amd64
   context: .
   dockerfile: Dockerfile
+
+aliases:
+  console: app exec -i 'bin/rails console'
+  migrate: app exec 'bin/rails db:migrate'
+  migrate-status: app exec 'bin/rails db:migrate:status'
+  rollback-migration: app exec 'bin/rails db:rollback'
+  logs: app logs -f
+  bash: app exec -i 'bash'
+  routes: app exec 'bin/rails routes'
+  about: app exec 'bin/rails about'
+  restart: app restart
+  assets: app exec 'bin/rails assets:precompile'
+  disk: app exec 'df -h'
+  rake: app exec 'bin/rails'
