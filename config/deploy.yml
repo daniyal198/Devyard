@@ -22,7 +22,7 @@ registry:
   server: 748435451926.dkr.ecr.us-east-1.amazonaws.com
   username: AWS
   password:
-    - KAMAL_REGISTRY_PASSWORD
+    - ECR_REGISTRY_PASSWORD
 
 env:
   secret:
