@@ -28,6 +28,11 @@ env:
   secret:
     - RAILS_MASTER_KEY
     - SECRET_KEY_BASE
+  clear:
+    RAILS_ENV: production
+    RAILS_MAX_THREADS: "25"
+    SOLID_QUEUE_IN_PUMA: "true"
+    AWS_REGION: us-east-1
 
 volumes:
   - /data/devyard/storage:/rails/storage
