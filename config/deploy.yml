@@ -41,6 +41,9 @@ builder:
   arch: amd64
   context: .
   dockerfile: Dockerfile
+  cache:
+    type: registry
+    options: mode=max
 
 aliases:
   console: app exec -i 'bin/rails console'
