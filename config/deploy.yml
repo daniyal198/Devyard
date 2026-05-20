@@ -50,11 +50,14 @@ aliases:
   migrate: app exec 'bin/rails db:migrate'
   migrate-status: app exec 'bin/rails db:migrate:status'
   rollback-migration: app exec 'bin/rails db:rollback'
+  seed: app exec --reuse "bin/rails db:seed"
+  routes: app exec 'bin/rails routes'
   logs: app logs -f
   bash: app exec -i 'bash'
-  routes: app exec 'bin/rails routes'
   about: app exec 'bin/rails about'
   restart: app restart
   assets: app exec 'bin/rails assets:precompile'
   disk: app exec 'df -h'
   rake: app exec 'bin/rails'
+  reboot: app boot
+  info: details
