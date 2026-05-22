@@ -4,6 +4,8 @@
     <title>DevYard - Premium Software Development Agency</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="DevYard - Your trusted partner in building exceptional digital products. Web development, mobile apps, UI/UX design, and more.">
+    <link rel="canonical" href="<%= "https://devyard.co#{request.path}" %>">
+    <link rel="preload" as="image" href="<%= asset_path('Devyard_logo.png') %>" fetchpriority="high">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>

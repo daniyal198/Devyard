@@ -7,7 +7,9 @@ servers:
 
 proxy:
   ssl: true
-  host: devyard.co
+  hosts:
+    - devyard.co
+    - www.devyard.co
   app_port: 3000
 
   healthcheck:
